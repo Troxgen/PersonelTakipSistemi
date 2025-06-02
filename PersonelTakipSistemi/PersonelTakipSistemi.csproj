@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F17AAFDD-6B71-49A5-A992-05F422F9CE11}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PersonelTakipSistemi</RootNamespace>
+    <AssemblyName>PersonelTakipSistemi</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Log.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Kontrol.cs" />
+    <Compile Include="Personel\PersonelAnaEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelAnaEkran.Designer.cs">
+      <DependentUpon>PersonelAnaEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelAyarlar.Designer.cs">
+      <DependentUpon>PersonelAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelDenetimKaydi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelDenetimKaydi.Designer.cs">
+      <DependentUpon>PersonelDenetimKaydi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelDepartmanDuzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelDepartmanDuzenleme.Designer.cs">
+      <DependentUpon>PersonelDepartmanDuzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelDevamsizlikDuzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelDevamsizlikDuzenleme.Designer.cs">
+      <DependentUpon>PersonelDevamsizlikDuzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelDuzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelDuzenleme.Designer.cs">
+      <DependentUpon>PersonelDuzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelMaasDuzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelMaasDuzenleme.Designer.cs">
+      <DependentUpon>PersonelMaasDuzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelMesaiDuzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelMesaiDuzenleme.Designer.cs">
+      <DependentUpon>PersonelMesaiDuzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\PersonelYetkiliDuzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\PersonelYetkiliDuzenleme.Designer.cs">
+      <DependentUpon>PersonelYetkiliDuzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelAnaEkran.resx">
+      <DependentUpon>PersonelAnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelAyarlar.resx">
+      <DependentUpon>PersonelAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelDenetimKaydi.resx">
+      <DependentUpon>PersonelDenetimKaydi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelDepartmanDuzenleme.resx">
+      <DependentUpon>PersonelDepartmanDuzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelDevamsizlikDuzenleme.resx">
+      <DependentUpon>PersonelDevamsizlikDuzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelDuzenleme.resx">
+      <DependentUpon>PersonelDuzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelMaasDuzenleme.resx">
+      <DependentUpon>PersonelMaasDuzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelMesaiDuzenleme.resx">
+      <DependentUpon>PersonelMesaiDuzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\PersonelYetkiliDuzenleme.resx">
+      <DependentUpon>PersonelYetkiliDuzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KapaliGoz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AcikGoz.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
